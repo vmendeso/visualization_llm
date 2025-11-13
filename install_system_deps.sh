@@ -26,6 +26,12 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
             libcairo2-dev \
             libgirepository1.0-dev \
             python3-cairo \
+            libgl1-mesa-glx \
+            libgl1-mesa-dev \
+            libegl1-mesa \
+            libegl1-mesa-dev \
+            libgles2-mesa-dev \
+            freeglut3-dev \
             texlive \
             texlive-latex-extra \
             texlive-fonts-extra \
@@ -41,6 +47,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
             ffmpeg \
             cairo-devel \
             gobject-introspection-devel \
+            mesa-libGL \
+            mesa-libGL-devel \
+            mesa-libEGL \
+            mesa-libEGL-devel \
+            freeglut-devel \
             texlive
 
     elif command -v pacman &> /dev/null; then
@@ -53,6 +64,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
             ffmpeg \
             cairo \
             gobject-introspection \
+            mesa \
+            glu \
+            freeglut \
             texlive-core
 
     else

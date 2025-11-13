@@ -14,7 +14,8 @@
 Linux (Ubuntu/Debian):
 ```bash
 sudo apt-get update
-sudo apt-get install -y libpango1.0-dev pkg-config python3-dev ffmpeg libcairo2-dev texlive
+sudo apt-get install -y libpango1.0-dev pkg-config python3-dev ffmpeg libcairo2-dev \
+    libgl1-mesa-glx libgl1-mesa-dev libegl1-mesa libegl1-mesa-dev texlive
 ```
 
 macOS:
@@ -76,6 +77,11 @@ checkpoint_paste()  # No modo interativo
 ```
 
 ## Solução Rápida de Problemas
+
+**Erro de OpenGL (libEGL.so ou libGL.so)?**
+```bash
+sudo apt-get install -y libgl1-mesa-glx libgl1-mesa-dev libegl1-mesa libegl1-mesa-dev  # Linux
+```
 
 **Erro de pangocairo?**
 ```bash
