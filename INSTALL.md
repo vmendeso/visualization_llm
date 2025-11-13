@@ -18,6 +18,12 @@ sudo apt-get install -y \
     libcairo2-dev \
     libgirepository1.0-dev \
     python3-cairo \
+    libgl1-mesa-glx \
+    libgl1-mesa-dev \
+    libegl1-mesa \
+    libegl1-mesa-dev \
+    libgles2-mesa-dev \
+    freeglut3-dev \
     texlive-full
 ```
 
@@ -72,6 +78,30 @@ O arquivo `custom_config.yml` contém configurações personalizadas para o mani
 - FPS e qualidade de renderização
 
 ## Solução de Problemas
+
+### Erro: "OSError: libEGL.so: cannot open shared object file" ou "libGL.so: cannot open shared object file"
+Este erro indica que as bibliotecas OpenGL/Mesa não estão instaladas. Instale-as com:
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install -y \
+    libgl1-mesa-glx \
+    libgl1-mesa-dev \
+    libegl1-mesa \
+    libegl1-mesa-dev \
+    libgles2-mesa-dev \
+    freeglut3-dev
+```
+
+**Fedora/RHEL:**
+```bash
+sudo yum install -y mesa-libGL mesa-libGL-devel mesa-libEGL mesa-libEGL-devel freeglut-devel
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S mesa glu freeglut
+```
 
 ### Erro: "pangocairo >= 1.30.0 is required"
 Instale as dependências de desenvolvimento do Pango:
