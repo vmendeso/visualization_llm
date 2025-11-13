@@ -1,0 +1,30 @@
+# Include documentation
+include README.md
+include CLAUDE.md
+include INSTALL.md
+include LICENSE.txt
+
+# Include configuration
+include custom_config.yml
+include manim_imports_ext.py
+
+# Include scripts
+include stage_scenes.py
+
+# Include custom package data
+recursive-include custom *.py
+recursive-include custom *.png
+recursive-include custom *.svg
+recursive-include custom *.jpg
+recursive-include custom *.json
+
+# Include useful constructs
+recursive-include once_useful_constructs *.py
+
+# Exclude unnecessary files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude .git*
